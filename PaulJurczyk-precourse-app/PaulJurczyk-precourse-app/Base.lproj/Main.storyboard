@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G5a-dm-fap">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PaulJurczyk_precourse_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gk0-7x-kKF">
+                                <rect key="frame" x="20" y="80" width="560" height="353"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Paul Jurczyk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzh-Vv-1VN">
+                                        <rect key="frame" x="232" y="0.0" width="97" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="ZDX-d4-Jdk">
+                                        <rect key="frame" x="120" y="33" width="320" height="320"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZDX-d4-Jdk" secondAttribute="height" multiplier="1:1" id="uSk-v4-oZi"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ulK-yr-H38" appends="YES" id="BBr-dE-rwm"/>
+                                            <outletCollection property="gestureRecognizers" destination="pLe-Dj-UyI" appends="YES" id="Nie-j7-rWj"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gk0-7x-kKF" secondAttribute="trailing" id="0Kl-ek-qaY"/>
+                            <constraint firstItem="gk0-7x-kKF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UeU-1g-jS8"/>
+                            <constraint firstItem="gk0-7x-kKF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="j09-tC-ELV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5oi-Of-u8e"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="ZDX-d4-Jdk" id="pGK-R5-GK9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ulK-yr-H38">
+                    <connections>
+                        <action selector="selectedImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="uhW-QM-2cr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="pLe-Dj-UyI">
+                    <connections>
+                        <segue destination="fCI-SB-UjI" kind="show" id="n9i-Ps-Tzx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1306" y="411"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gsm-X2-D2v">
+            <objects>
+                <viewController id="fCI-SB-UjI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r3V-wO-sky"/>
+                        <viewControllerLayoutGuide type="bottom" id="MuU-bb-fWt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="irC-XE-ih8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bGA-6i-is9">
+                                <rect key="frame" x="20" y="80" width="560" height="560"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="fty-Pk-q8b">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="560"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fty-Pk-q8b" secondAttribute="height" multiplier="1:1" id="puh-cp-Yla"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="bGA-6i-is9" secondAttribute="trailing" id="1E1-od-6eM"/>
+                            <constraint firstItem="bGA-6i-is9" firstAttribute="top" secondItem="r3V-wO-sky" secondAttribute="bottom" constant="60" id="YIn-DL-ohc"/>
+                            <constraint firstItem="bGA-6i-is9" firstAttribute="leading" secondItem="irC-XE-ih8" secondAttribute="leadingMargin" id="s8y-ZV-ENN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wWR-QY-8Qz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2058" y="415"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ccl-mD-Bjt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G5a-dm-fap" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SQD-iY-sPS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aiz-Uq-esW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bo-sx-wOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="494" y="411"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="168" height="168"/>
+    </resources>
+</document>
